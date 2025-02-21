@@ -9,7 +9,6 @@ import {
     persistStore,
     REGISTER,
 } from "redux-persist";
-import globalStateReducer from "./modules/globalStates";
 import accessTokenReducer from "./modules/accessToken";
 import storage from "redux-persist/lib/storage";
 import { authApi } from "./api/authApi";
@@ -18,11 +17,10 @@ import { usersApi } from "./api/usersApi";
 const persistConfig = {
     key: "root",
     storage,
-    blacklist: ["globalState", "usersApi", "authApi"],
+    blacklist: ["usersApi", "authApi"],
 };
 
 const rootReducer = combineReducers({
-    globalState: globalStateReducer,
     accessToken: accessTokenReducer,
     [authApi.reducerPath]: authApi.reducer,
     [usersApi.reducerPath]: usersApi.reducer,

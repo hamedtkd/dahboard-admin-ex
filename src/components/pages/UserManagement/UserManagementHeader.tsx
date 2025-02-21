@@ -1,5 +1,5 @@
-import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
+import SectionTitle from "@/components/SectionTitle";
 
 type UserManagementHeaderProps = {
     onAdd: () => void;

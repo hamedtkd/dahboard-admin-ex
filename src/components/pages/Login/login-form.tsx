@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import useLogin from "./useLogin";
 import { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@/assets/icons";
+import useLogin from "./useLogin";
 
 export function LoginForm({
     className,
@@ -44,7 +44,7 @@ export function LoginForm({
                                     }
                                     {...register("email")}
                                     type="email"
-                                    placeholder="m@example.com"
+                                    placeholder="h@example.com"
                                     required
                                 />
                             </div>
@@ -53,6 +53,7 @@ export function LoginForm({
                                     <Label htmlFor="password">Password</Label>
                                 </div>
                                 <Input
+                                    placeholder="Enter your password"
                                     helperText={
                                         errors.password?.message ?? undefined
                                     }

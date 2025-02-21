@@ -1,9 +1,5 @@
-import {
-    FetchBaseQueryError,
-    createApi,
-    fetchBaseQuery,
-} from "@reduxjs/toolkit/query/react";
-import { ReturnErrorType, ReturnSuccessType } from "../constants";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { ReturnSuccessType } from "../constants";
 import { API_BASE_URL } from "../../config/config.env";
 import { UserTableDataT } from "@/components/pages/UserManagement/UserManagementTable";
 import { NewMemberFormDataT } from "@/components/pages/UserManagement/MemberForm/useMember";
@@ -38,11 +34,6 @@ export const usersApi = createApi({
                 method: "POST",
             }),
             transformResponse: (response: ReturnSuccessType<any>) => response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ): ReturnErrorType => {
-                return response as ReturnErrorType;
-            },
         }),
         editUser: builder.mutation({
             query: ({
@@ -57,11 +48,6 @@ export const usersApi = createApi({
                 method: "PATCH",
             }),
             transformResponse: (response: ReturnSuccessType<any>) => response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ): ReturnErrorType => {
-                return response as ReturnErrorType;
-            },
         }),
         deleteUser: builder.mutation({
             query: ({ id }: { id?: string }) => ({
@@ -69,11 +55,6 @@ export const usersApi = createApi({
                 method: "DELETE",
             }),
             transformResponse: (response: ReturnSuccessType<any>) => response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ): ReturnErrorType => {
-                return response as ReturnErrorType;
-            },
         }),
 
         getUser: builder.query({
@@ -86,11 +67,6 @@ export const usersApi = createApi({
             transformResponse: (
                 response: ReturnSuccessUserType<UserTableDataT>,
             ) => response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ): ReturnErrorType => {
-                return response as ReturnErrorType;
-            },
         }),
         getUsers: builder.query({
             query: ({ page }: { page?: number }) => {
@@ -102,11 +78,6 @@ export const usersApi = createApi({
             transformResponse: (
                 response: ReturnSuccessUserType<UserTableDataT[]>,
             ) => response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ): ReturnErrorType => {
-                return response as ReturnErrorType;
-            },
         }),
     }),
 });

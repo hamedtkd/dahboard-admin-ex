@@ -22,7 +22,7 @@ export default function NoResultFound({
                         {title}
                     </h1>
                 )}
-                {description && <p className=" text-sub">{description}</p>}
+                {description && <p>{description}</p>}
             </div>
         </div>
     );

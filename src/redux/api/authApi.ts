@@ -1,10 +1,6 @@
-import {
-    FetchBaseQueryError,
-    createApi,
-    fetchBaseQuery,
-} from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { ReturnErrorType, ReturnSuccessType } from "../constants";
+import { ReturnSuccessType } from "../constants";
 import { API_BASE_URL } from "../../config/config.env";
 import { LoginFormData } from "@/components/pages/Login/useLogin";
 
@@ -31,9 +27,6 @@ export const authApi = createApi({
             }),
             transformResponse: (response: ReturnSuccessType<string>) =>
                 response,
-            transformErrorResponse: (
-                response: FetchBaseQueryError | ReturnErrorType,
-            ) => response,
         }),
     }),
 });

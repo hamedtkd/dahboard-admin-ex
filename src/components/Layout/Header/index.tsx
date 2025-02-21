@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import UserProfile from "./UserProfile";
 import { useAppDispatch } from "@/redux/hooks";
 import { useNavigate } from "react-router-dom";
 import { setAccessToken } from "@/redux/modules/accessToken";
+import UserProfile from "./UserProfile";
 import Cookies from "js-cookie";
 
 const Header = () => {

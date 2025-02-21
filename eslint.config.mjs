@@ -10,7 +10,7 @@ export default [
         languageOptions: {
             ecmaVersion: "latest",
             sourceType: "module",
-            parser: tsParser, 
+            parser: tsParser,
         },
         plugins: {
             "@typescript-eslint": eslintPluginTypeScript,

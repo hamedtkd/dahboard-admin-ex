@@ -1,17 +1,15 @@
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-// import CreateMemberModal from "./MemberModal";
-import UserManagementHeader from "./UserManagementHeader";
+import { useNavigate, useSearchParams } from "react-router-dom"; 
 import { createUsersColumns } from "./usersColumns";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DataTable } from "@/components/ui/data-table";
 import { Pagination } from "@/components/ui/pagination";
 import { Button } from "@/components/ui/button";
 import { useDeleteUserMutation, useGetUsersQuery } from "@/redux/api/usersApi";
-
+import { toast } from "sonner";
+import UserManagementHeader from "./UserManagementHeader";
 import NoResultFound from "@/components/NoResultFound";
 import MemberForm from "./MemberForm";
-import { toast } from "sonner";
 
 export type UserTableDataT = {
     id: string;
@@ -20,8 +18,6 @@ export type UserTableDataT = {
     last_name: string;
     avatar: string;
 };
-
-// const isLoading = false;
 
 export default function UserManagementTable() {
     const [searchParams, setSearchParams] = useSearchParams();

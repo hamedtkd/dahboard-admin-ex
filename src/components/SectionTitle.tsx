@@ -11,7 +11,7 @@ export default function SectionTitle({
             <h1 className={cn("font-medium lg:display-5 md:label-lg label-5 ")}>
                 {title}
             </h1>
-            <p className={cn("text-sub lg:paragraph-sm  paragraph-xs")}>
+            <p className={cn("lg:paragraph-sm  paragraph-xs")}>
                 {description}
             </p>
         </div>

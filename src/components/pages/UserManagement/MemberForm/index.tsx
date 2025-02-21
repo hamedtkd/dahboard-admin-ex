@@ -1,4 +1,3 @@
-import useMember from "./useMember";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +9,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog";
+import useMember from "./useMember";
 
 export default function MemberForm({
     onComplete,
