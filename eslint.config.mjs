@@ -1,6 +1,7 @@
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import eslintPluginReact from "eslint-plugin-react";
 import eslintPluginTypeScript from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 
 export default [
     {
@@ -9,6 +10,7 @@ export default [
         languageOptions: {
             ecmaVersion: "latest",
             sourceType: "module",
+            parser: tsParser, 
         },
         plugins: {
             "@typescript-eslint": eslintPluginTypeScript,

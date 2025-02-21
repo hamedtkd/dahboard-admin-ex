@@ -1,4 +1,4 @@
- export type TitleDescriptionT = {
-  title: string;
-  description: string;
+export type TitleDescriptionT = {
+    title: string;
+    description: string;
 };

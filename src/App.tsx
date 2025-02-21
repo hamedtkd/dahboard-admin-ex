@@ -3,7 +3,7 @@ import { router } from "./routes/index";
 import { Toaster } from "@/components/ui/sonner";
 import ReduxProvider from "./redux/ReduxProvider";
 
-function App() { 
+function App() {
     return (
         <ReduxProvider>
             <Toaster />

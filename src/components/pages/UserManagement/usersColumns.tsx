@@ -27,7 +27,10 @@ export const createUsersColumns = (
                     )}
                 >
                     <Avatar>
-                        <AvatarImage src={avatar} alt={`${first_name} Profile`} />
+                        <AvatarImage
+                            src={avatar}
+                            alt={`${first_name} Profile`}
+                        />
                         <AvatarFallback>
                             {first_name?.slice(0, 2)}
                         </AvatarFallback>
